@@ -1,0 +1,52 @@
+.listContainer {
+  // border: 1px solid white;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 400px;
+  overflow-y: auto;
+
+  .item {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .todoWrapper {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 80%;
+    }
+
+    .time {
+      margin-top: 4px;
+      font-size: 10px;
+      color: #808080;
+    }
+
+    .actionBtn {
+      width: inherit;
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+
+      .btn {
+        transition: all .2s;
+        &:hover {
+          cursor: pointer;
+          scale: 1.3;
+        }
+      }
+    }
+  }
+
+  textarea {
+    width: 100%;
+    background-color: blue;
+  }
+}

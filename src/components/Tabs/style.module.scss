@@ -1,0 +1,13 @@
+.tabContainer {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

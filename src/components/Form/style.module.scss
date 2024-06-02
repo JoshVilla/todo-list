@@ -1,0 +1,31 @@
+.formContainer {
+  // border: 1px solid white;
+  // padding: 5px;
+  width: 100%;
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: rgb(77, 77, 77);
+      border: none;
+      color: #fff;
+
+      &:focus {
+        color: #000;
+      }
+    }
+
+    button {
+      height: 35px;
+      width: 100px;
+      // font-size: 12px;
+    }
+  }
+}
