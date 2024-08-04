@@ -1,5 +1,5 @@
 import { Button } from "antd";
-import React, { useState } from "react";
+import { useState } from "react";
 import style from "./style.module.scss";
 type Props = {
   onChange: Function;

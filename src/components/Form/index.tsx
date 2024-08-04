@@ -1,8 +1,8 @@
-import React, { MouseEvent, useEffect, useState } from "react";
+import { MouseEvent, useState } from "react";
 import style from "./style.module.scss";
 import { generateId } from "../../helpers/helpers";
 import moment from "moment";
-import { Button, Input, Form as AntForm, Modal } from "antd";
+import { Button, Input, Form as AntForm } from "antd";
 import { Todo } from "../../interface/global";
 import DeleteModal from "../Modal/deleteModal";
 type Props = {

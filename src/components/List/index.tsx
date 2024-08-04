@@ -1,4 +1,4 @@
-import React, { MouseEvent, useEffect, useState } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 import style from "./style.module.scss";
 import { Input, message, Modal, Tooltip } from "antd";
 import { GetTodo, Todo } from "../../interface/global";
