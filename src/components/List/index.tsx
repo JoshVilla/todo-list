@@ -3,6 +3,7 @@ import style from "./style.module.scss";
 import { Input, message, Modal, Tooltip } from "antd";
 import { GetTodo, Todo } from "../../interface/global";
 import DeleteModal from "../Modal/deleteModal";
+import moment from "moment";
 
 const { TextArea } = Input;
 type Props = {
@@ -21,7 +22,7 @@ const List = ({ list, onChange, tab }: Props) => {
     isFinished: false,
   });
   const [openModal, setOpenModal] = useState(false);
-  const finish = (e: MouseEvent, id: string) => {
+  const finish = (e: MouseEvent, id: string | null) => {
     e.preventDefault();
     const newList = list.map((o: Todo) => {
       if (o.id === id)
@@ -47,6 +48,7 @@ const List = ({ list, onChange, tab }: Props) => {
           return {
             ...o,
             todo: getTodo.todo,
+            editedAt: moment().format("MMMM Do YYYY, h:mm:ss a"),
           };
         }
         return o;
@@ -133,9 +135,15 @@ const List = ({ list, onChange, tab }: Props) => {
               <div>
                 <div className={style.todoWrapper}>{items.todo}</div>
                 <div className={style.time}>
-                  <b>Created last: </b>
+                  <b>Created at: </b>
                   {items.createdAt}
                 </div>
+                {items.editedAt && !items.isFinished && (
+                  <div className={style.time}>
+                    <b>Edited at: </b>
+                    {items.editedAt}
+                  </div>
+                )}
               </div>
               {!items.isFinished && (
                 <div className={style.actionBtn}>

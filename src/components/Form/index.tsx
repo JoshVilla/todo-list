@@ -21,6 +21,7 @@ const Form = ({ addFunction, onChange }: Props) => {
       id: generateId(),
       isFinished: false,
       createdAt: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      editedAt: "",
     };
     e.preventDefault();
     if (!todo) return;

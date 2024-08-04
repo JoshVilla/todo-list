@@ -1,8 +1,9 @@
 export interface Todo {
   todo: string;
-  id: string;
+  id: string | null;
   isFinished: boolean;
   createdAt: string;
+  editedAt: string;
 }
 
 export interface GetTodo {
